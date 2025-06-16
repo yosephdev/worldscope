@@ -1,0 +1,101 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. */
+
+@layer base {
+  :root {
+    --background: 0 0% 98%;
+    --foreground: 200 15% 8%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 200 15% 8%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 200 15% 8%;
+
+    --primary: 200 15% 8%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 200 15% 8%;
+
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 52%;
+
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 200 15% 8%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 0 0% 52%;
+    --ring: 200 15% 8%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 200 15% 8%;
+    --sidebar-primary: 200 15% 8%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 96.1%;
+    --sidebar-accent-foreground: 200 15% 8%;
+    --sidebar-border: 214.3 31.8% 91.4%;
+    --sidebar-ring: 200 15% 8%;
+  }
+
+  .dark {
+    --background: 207 26% 17%;
+    --foreground: 0 0% 100%;
+
+    --card: 209 23% 22%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 209 23% 22%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 0 0% 100%;
+    --primary-foreground: 207 26% 17%;
+
+    --secondary: 209 23% 22%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 209 23% 22%;
+    --muted-foreground: 0 0% 100%;
+
+    --accent: 209 23% 22%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 209 23% 22%;
+    --input: 209 23% 22%;
+    --ring: 0 0% 100%;
+
+    --sidebar-background: 207 26% 17%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 0 0% 100%;
+    --sidebar-primary-foreground: 207 26% 17%;
+    --sidebar-accent: 209 23% 22%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 209 23% 22%;
+    --sidebar-ring: 0 0% 100%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-nunito;
+    font-size: 14px;
+    font-weight: 300;
+  }
+}
