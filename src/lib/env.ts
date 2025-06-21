@@ -20,7 +20,7 @@ function validateEnv(): Env {
     Object.keys(env).forEach((key) => {
         const envValue = import.meta.env[key];
         if (envValue !== undefined) {
-            (env as any)[key] = envValue;
+            (env as Record<string, string>)[key] = envValue;
         }
     });
 
