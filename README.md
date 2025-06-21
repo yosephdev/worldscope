@@ -2,7 +2,7 @@
 
 A modern and responsive country search app powered by the [REST Countries API](https://restcountries.com/). Built with **Vite**, **React**, **TypeScript**, **TailwindCSS**, **shadcn/ui**, and **Radix UI**. Includes a dark/light theme toggle and country detail pages.
 
-![Preview](./public/desktop-preview.png)
+![Preview](./public/worldscope.png)
 
 ## ✨ Features
 
