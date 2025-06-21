@@ -39,8 +39,8 @@ A modern and responsive country search app powered by the [REST Countries API](h
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/yosephdev/rest-countries-theme-switcher.git
-cd rest-countries-theme-switcher
+git clone https://github.com/yosephdev/worldscope
+cd rest-countries-api
 ```
 
 ### 2. Install dependencies
@@ -59,7 +59,7 @@ npm run dev
 yarn dev
 ```
 
-Open http://localhost:5173 in your browser.
+Open <http://localhost:5173> in your browser.
 
 ## 🧪 Available Scripts
 
@@ -70,6 +70,7 @@ Open http://localhost:5173 in your browser.
 | `npm run build:dev` | Build in development mode |
 | `npm run preview` | Preview the production build |
 | `npm run lint` | Run ESLint to check code quality |
+
 ## 🧰 Project Structure
 
 ```
@@ -81,6 +82,7 @@ src/
 ├── lib/              # API fetchers and helpers
 ├── routes/           # Route definitions
 └── main.tsx          # App root & provider setup
+
 ```
 
 ## 🎨 Design System
@@ -93,15 +95,16 @@ src/
 ### Color Palette
 
 #### Light Mode
+
 - Background: hsl(0, 0%, 98%)
 - Text: hsl(200, 15%, 8%)
 - Input: hsl(0, 0%, 52%)
 
 #### Dark Mode
+
 - Background: hsl(207, 26%, 17%)
 - Elements: hsl(209, 23%, 22%)
 - Text: hsl(0, 0%, 100%)
-
 
 ## 📄 License
 
@@ -116,6 +119,7 @@ This project is licensed under the MIT License.
 ## ✍️ Author
 
 **Yoseph Berhane**  
+
 - 🌐 [yoseph.dev](https://yoseph.dev)
 - 🐦 [@yosephbet](https://twitter.com/yosephbet)
 - 💼 [LinkedIn](https://linkedin.com/in/yosephberhane)
