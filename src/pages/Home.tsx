@@ -1,11 +1,9 @@
-
 import { useState, useEffect, useMemo } from 'react';
 import { useQuery } from '@tanstack/react-query';
-import { fetchAllCountries } from '../services/api';
-import { Country, Region } from '../types/country';
-import Header from '../components/Header';
+import { fetchCountries } from '../lib/api';
+import { Country, Region } from '../lib/api';
 import SearchAndFilter from '../components/SearchAndFilter';
-import CountriesGrid from '../components/CountriesGrid';
+import { CountriesGrid } from '../components/CountriesGrid';
 
 const Home = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -18,7 +16,7 @@ const Home = () => {
     refetch 
   } = useQuery({
     queryKey: ['countries'],
-    queryFn: fetchAllCountries,
+    queryFn: fetchCountries,
   });
 
   const filteredCountries = useMemo(() => {
@@ -42,26 +40,22 @@ const Home = () => {
   if (error) {
     console.error('API Error:', error);
     return (
-      <div className="min-h-screen bg-background">
-        <Header />
-        <div className="container mx-auto px-4 py-16 text-center">
-          <p className="text-xl text-destructive">
-            Error loading countries. Please try again later.
-          </p>
-          <button 
-            className="mt-4 px-4 py-2 bg-primary text-primary-foreground rounded-md hover:bg-primary/90"
-            onClick={() => refetch()}
-          >
-            Retry
-          </button>
-        </div>
+      <div className="container mx-auto px-4 py-16 text-center">
+        <p className="text-xl text-red-600 dark:text-red-400">
+          Error loading countries. Please try again later.
+        </p>
+        <button 
+          className="mt-4 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700"
+          onClick={() => refetch()}
+        >
+          Retry
+        </button>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-background">
-      <Header />
+    <>
       <SearchAndFilter
         searchTerm={searchTerm}
         selectedRegion={selectedRegion}
@@ -69,7 +63,7 @@ const Home = () => {
         onRegionChange={setSelectedRegion}
       />
       <CountriesGrid countries={filteredCountries} loading={isLoading} />
-    </div>
+    </>
   );
 };
 
